@@ -1,0 +1,10 @@
+<%= @generated_string %>
+
+<form action="/score" method="get" data-turbo="false">
+  <!-- ... -->
+  <label for="answer">What is the longest word you can find?</label>
+  <input type="text" id ="answer" name="answer" class="form-control">
+  <input type="submit" value="submit" class="btn btn-primary" >
+  <%= hidden_field_tag :generated_string, @generated_string %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
